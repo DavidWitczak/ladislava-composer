@@ -1,0 +1,33 @@
+{% set node_url = url('entity.node.canonical', {'node': node.id}) %}
+<div class="container">
+    <div class="row justify-content-center">
+        <h2>Concert</h2>
+    </div>
+
+    <div class="row justify-content-around py-4 concert">
+        <div class="col-lg-2">{{ node.field_date.value|date('U')|format_date('date_live')|upper }}</div>
+        <div class="col-lg-1">{{ node.field_date.value|date('U')|format_date('heure_live') }}</div>
+        <div class="col-lg-3">{{ node.field_lieu.value|upper }}</div>
+        <div class="col-lg-3">{{ node.field_ville.value|upper }}</div>
+        <div class="col-lg-2 text-align-right">
+            <a href="{{ node.field_map.0.url }}" target="_blank">
+                <img width="30" src="{{ url('<front>') }}{{ directory }}/images/location.png">
+            </a>
+            <img class="share-btn" width="30" src="{{ url('<front>') }}{{ directory }}/images/share.png">
+
+            <div class="share-box">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ node_url }}" target="_blank">
+                    <img width="30" src="{{ url('<front>') }}{{ directory }}/images/facebook.png">
+                </a>
+                <a href="https://twitter.com/home?status={{ node_url }}" target="_blank">
+                    <img width="30" src="{{ url('<front>') }}{{ directory }}/images/twitter.png">
+                </a>
+                <a href="mailto:info@example.com?&subject=Concert&body={{ node_url }}" target="_blank">
+                    <img width="30" src="{{ url('<front>') }}{{ directory }}/images/mail.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h2>{{ node.title.value }}</h2>
+    </div>
+
+    <h4>Télécharger la plaquette</h4>
+    {% set media_entity = bamboo_load_entity('media', node.field_plaquette.target_id) %}
+    {% set file = media_entity.field_media_file.entity %}
+    <ul>
+        <li><a href="{{ file_url(file.uri.value) }}" target="_blank">{{ media_entity.name.value }}</a></li>
+    </ul>
+
+    {% for rubriques in node.field_rubrique_pro %}
+        {% set rubrique = bamboo_load_entity('paragraph', rubriques.target_id) %}
+
+        <h4>{{ rubrique.field_titre_rubrique.value }}</h4>
+<ul>
+        {% for files in rubrique.field_fichier %}
+            {% set media_entity = bamboo_load_entity('media', files.target_id) %}
+            {% set file = media_entity.field_media_file.entity %}
+            <li><a href="{{ file_url(file.uri.value) }}" target="_blank">{{ media_entity.name.value }}</a></li>
+        {% endfor %}
+</ul>
+    {% endfor %}
+
+    <p>
+        {{ node.field_about.value|raw }}
+    </p>
+</div>
