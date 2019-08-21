@@ -1,0 +1,11 @@
+name: Ladislava
+type: theme
+description: 'Theme principal'
+package: Other
+core: 8.x
+
+base theme: false
+
+libraries:
+  - ladislava/global-css
+  - ladislava/global-js

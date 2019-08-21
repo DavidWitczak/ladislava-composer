@@ -1,0 +1,212 @@
+html, .modal-content {
+    background: #100806;
+}
+
+body {
+    font-family: 'Roboto Regular';
+    color: white;
+    background: #100806;
+}
+
+a {
+    color: #8e8e8e;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+a.nav-link:hover {
+    border-bottom: 0.2rem solid white;
+    margin-bottom: .3rem;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+#block-ladislava-local-tasks{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#block-ladislava-local-tasks ul{
+    list-style: none;
+    padding: 0;
+}
+
+#block-ladislava-local-tasks ul li{
+    float: left;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background: #cccccc;
+    border-radius: 5px 5px 0 0;
+}
+
+#block-ladislava-local-tasks ul li a{
+    color: black;
+}
+
+.nav-link {
+    margin: .5rem 1rem;
+    padding: 0;
+}
+
+.banniere {
+    margin-top: -100px;
+}
+
+.nav-principale {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.navbar-toggler{
+    margin-left: -2.5rem;
+}
+
+.btn-std {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.banniere .btn-std {
+    margin-top: -600px;
+    position: relative;
+    z-index: 2;
+}
+
+.img-ban{
+    /*opacity: 0.4;*/
+}
+
+.opcity-ban{
+    background: #100806;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+}
+
+.concerts {
+    background-image: url("../images/concerts.jpg");
+    background-size: cover;
+    background-position: center, center;
+    min-height: 720px;
+}
+
+.concert {
+    border-bottom: 3px solid white;
+    font-size: 1.2rem;
+}
+
+.share-btn{
+    cursor: pointer;
+}
+
+.share-box{
+    padding: 5px 10px;
+    background: #100806;
+    position: absolute;
+    top: 125%;
+    right: -30px;
+    border-radius: 5px;
+    display: none;
+    border: 1px solid white;
+}
+
+.concert:last-child {
+    border: none;
+}
+
+.img-album {
+    border: 10px solid #630d08;
+}
+
+.grid-item {
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+.slick-slide img {
+    display: inline;
+}
+
+.video_change{
+    cursor: pointer;
+}
+
+.footer {
+    background-image: url("../images/footer.jpg");
+    background-size: cover;
+    background-position: center, center;
+}
+
+.form-required::after {
+    content: '';
+    vertical-align: super;
+    display: inline-block;
+    background-image: url(/core/misc/icons/ee0000/required.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 6px;
+    width: 6px;
+    height: 6px;
+    margin: 0 0.3em;
+}
+
+.show-scroll{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.show-scroll-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5,0,0,1);
+}
+
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover, .close{
+    color: white;
+}
+
+.modal-content{
+    border: 1px solid gray;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 140px;
+    right: 20px;
+    background: #100806;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    border-color: #cccccc;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .banniere .btn-std{
+        margin-top: -100px;
+    }
+}

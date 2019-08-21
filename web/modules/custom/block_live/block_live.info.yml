@@ -1,0 +1,5 @@
+name: 'Block live'
+type: module
+description: 'Bloc affichant la liste des concerts'
+core: 8.x
+package: 'Custom'

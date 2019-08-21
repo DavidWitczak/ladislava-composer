@@ -1,0 +1,5 @@
+name: 'All lives'
+type: module
+description: 'Page affichant tous les concerts'
+core: 8.x
+package: 'Custom'

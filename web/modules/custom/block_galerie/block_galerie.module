@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains block_galerie.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function block_galerie_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the block_galerie module.
+    case 'help.page.block_galerie':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Bloc galerie photos') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function block_galerie_theme() {
+  return [
+    'block_galerie' => [
+      'variables' => [
+        'var' => [],
+      ],
+    ],
+  ];
+}

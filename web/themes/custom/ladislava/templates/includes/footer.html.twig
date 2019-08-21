@@ -1,0 +1,110 @@
+<div class="container-fluid py-5 mt-5 mb-4 footer">
+    <div class="container">
+        <div class="row justify-content-center position-relative">
+            <div>
+                <ul class="nav justify-content-center nav-principale mt-3 mb-5 pb-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('<front>') }}#about">à propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('<front>') }}#concerts">concerts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('<front>') }}#albums">albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('<front>') }}#photos">photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('<front>') }}#videos">vidéos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">espace pro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row justify-content-center position-relative my-5 pb-4">
+            <a href="{{ url('<front>') }}">
+                <img src="{{ url('<front>') }}{{ directory }}/images/logo.png">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<ul class="nav justify-content-center">
+    <li class="list-inline-item">
+        <a target="_blank" href="#">
+            <img src="{{ url('<front>') }}{{ directory }}/images/twitter.png">
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="#">
+            <img src="{{ url('<front>') }}{{ directory }}/images/facebook.png">
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="#">
+            <img src="{{ url('<front>') }}{{ directory }}/images/instagram.png">
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="#">
+            <img src="{{ url('<front>') }}{{ directory }}/images/youtube.png">
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="#">
+            <img src="{{ url('<front>') }}{{ directory }}/images/spotify.png">
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="#">
+            <img src="{{ url('<front>') }}{{ directory }}/images/soundcloud.jpg">
+        </a>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="row justify-content-around">
+        <div class="col text-align-center">
+            <a href="/mentions-legales" data-toggle="modal" data-target="#mentions">Mentions légales</a> - Ladislava 2019 - Tous droits réservés
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mentions" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mentions légales</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>Photographie</h4>
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+                <h4>Vidéos</h4>
+                <ul>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-campus" type="button" id="return-to-top">
+    <img src="{{ url('<front>') }}{{ directory }}/images/up.png">
+</button>

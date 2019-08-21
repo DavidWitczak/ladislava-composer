@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains block_live.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function block_live_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the block_live module.
+    case 'help.page.block_live':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Bloc affichant la liste des concerts') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function block_live_theme() {
+  return [
+    'block_live' => [
+      'variables' => [
+        'var' => [],
+      ],
+    ],
+  ];
+}

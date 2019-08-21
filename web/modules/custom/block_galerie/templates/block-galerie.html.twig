@@ -1,0 +1,28 @@
+<div class="row justify-content-center mx-5" style="border-top: 3px solid #c0c0c0">
+    <h2 id="photos" class="my-4">Photos</h2>
+</div>
+
+<div class="mx-5 mb-3">
+    {% for filter in var.filter %}
+        <h4 class="d-inline-block mr-2">
+            <a href="#" class="galerie-filter" data-filter="{{ filter }}">
+                {{ filter }}
+            </a>
+        </h4>
+    {% endfor %}
+</div>
+
+<div class="masonry" style="margin: 0 auto">
+    {% for photo in var.photos %}
+        {% set media_entity = bamboo_load_entity('media', photo) %}
+        {% set image = media_entity.field_media_image.entity %}
+
+        <div class="grid-item {{ media_entity.field_categorie_photo.entity.name.value }}" data-cat="">
+            <a href="{{ bamboo_render_image_style(image.fileuri, 'very_large') }}" data-fancybox="gallery">
+                <img class="mx-0 w-100 img-album"
+                     src="{{ bamboo_render_image_style(image.fileuri, 'large') }}">
+            </a>
+        </div>
+
+    {% endfor %}
+</div>

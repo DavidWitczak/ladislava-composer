@@ -1,0 +1,36 @@
+<div class="row justify-content-center py-3">
+    <h2 id="concerts">Concerts</h2>
+</div>
+
+{% for live in var.live %}
+    <div class="row justify-content-around py-4 concert">
+        <div class="col-lg-3">{{ live.date|date('U')|format_date('date_live')|upper }}</div>
+        <div class="col-lg-1">{{ live.date|date('U')|format_date('heure_live') }}</div>
+        <div class="col-lg-3">{{ live.lieu|upper }}</div>
+        <div class="col-lg-3">{{ live.ville|upper }}</div>
+        <div class="col-lg-1 text-align-right position-relative">
+            <a href="{{ live.map }}" target="_blank">
+                <img width="30" src="{{ url('<front>') }}{{ directory }}/images/location.png">
+            </a>
+            <img class="share-btn" width="30" src="{{ url('<front>') }}{{ directory }}/images/share.png">
+
+            <div class="share-box">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ live.url }}" target="_blank">
+                    <img width="30" src="{{ url('<front>') }}{{ directory }}/images/facebook.png">
+                </a>
+                <a href="https://twitter.com/home?status={{ live.url }}" target="_blank">
+                    <img width="30" src="{{ url('<front>') }}{{ directory }}/images/twitter.png">
+                </a>
+                <a href="mailto:info@example.com?&subject=Concert&body={{ live.url }}" target="_blank">
+                    <img width="30" src="{{ url('<front>') }}{{ directory }}/images/mail.png">
+                </a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<div class="text-align-center mt-5">
+    <a href="/concerts" class="btn btn-outline-light btn-lg btn-std">
+        Tous les concerts
+    </a>
+</div>

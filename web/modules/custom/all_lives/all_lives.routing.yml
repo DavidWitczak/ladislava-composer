@@ -1,0 +1,8 @@
+
+all_lives.all_lives_controller_allLives:
+  path: '/concerts'
+  defaults:
+    _controller: '\Drupal\all_lives\Controller\AllLivesController::allLives'
+    _title: 'Concerts'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: 'Block galerie'
+type: module
+description: 'Bloc galerie photos'
+core: 8.x
+package: 'Custom'
