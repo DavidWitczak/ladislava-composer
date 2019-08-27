@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'ocr';
+    src: url('../fonts/ocr/ocr.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* LATO FONT */
 
