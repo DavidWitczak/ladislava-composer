@@ -35,7 +35,7 @@
         centerMode: false,
         responsive: [
             {
-                breakpoint: 250,
+                breakpoint: 2500,
                 settings: {
                     slidesToShow: 3,
                     infinite: true,
