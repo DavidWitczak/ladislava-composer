@@ -135,3 +135,12 @@
     });
 
 })();
+
+window.onload = function () {
+    jQuery( ".loader" ).animate({
+        opacity: 0,
+        transition: "opacity 2s ease-out",
+    }, 1500, function(){
+        jQuery(this).css({'display':'none'})
+    } );
+}

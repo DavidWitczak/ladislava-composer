@@ -1,9 +1,17 @@
 @font-face {
     font-family: 'ocr';
+<<<<<<< HEAD
     src: url('../fonts/Ocr/ocr.ttf');
     font-weight: normal;
     font-style: normal;
 }
+=======
+    src: url('../fonts/ocr/ocr.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+>>>>>>> 352c105fe67147c8aa0e61b7eb043041764f9f92
 /* LATO FONT */
 
 @font-face {

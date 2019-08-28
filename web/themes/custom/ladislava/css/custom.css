@@ -30,6 +30,7 @@ h2 {
     text-transform: uppercase;
     display: inline-block;
     font-size: 2rem;
+    font-family: 'ocr';
 }
 
 #block-ladislava-local-tasks{
@@ -203,6 +204,20 @@ h2 {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.loader{
+    background: #100806;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
+}
+
+.loader img{
+    display: inline-block;
+    margin-top: 30px;
 }
 
 @media (max-width: 768px) {
