@@ -52,7 +52,9 @@ class AllLivesController extends ControllerBase {
       $output['#var']['live'][$key]['lieu'] = $live->get('field_lieu')->value;
       $output['#var']['live'][$key]['ville'] = $live->get('field_ville')->value;
       $output['#var']['live'][$key]['url'] = $url;
-      $output['#var']['live'][$key]['map'] = $live->field_map->first()->getUrl()->toString();
+      if (!$live->get('field_map')->isEmpty()) {
+        $output['#var']['live'][$key]['map'] = $live->field_map->first()->getUrl()->toString();
+      }
     }
 
     return $output;

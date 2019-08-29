@@ -13,9 +13,11 @@
                 <div class="col-lg-3">{{ live.lieu|upper }}</div>
                 <div class="col-lg-3">{{ live.ville|upper }}</div>
                 <div class="col-lg-2 text-align-right">
-                    <a href="{{ live.map }}" target="_blank">
-                        <img width="30" src="{{ url('<front>') }}{{ directory }}/images/location.png">
-                    </a>
+                    {% if live.map != '' %}
+                        <a href="{{ live.map }}" target="_blank">
+                            <img width="30" src="{{ url('<front>') }}{{ directory }}/images/location.png">
+                        </a>
+                    {% endif %}
                     <img class="share-btn" width="30" src="{{ url('<front>') }}{{ directory }}/images/share.png">
 
                     <div class="share-box">

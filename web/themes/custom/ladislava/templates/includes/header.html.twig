@@ -5,36 +5,7 @@
     <div class="container mt-2" style="position: relative; z-index: 2;">
 
         <ul class="nav justify-content-end">
-            <li class="list-inline-item">
-                <a target="_blank" href="#">
-                    <img src="{{ url('<front>') }}{{ directory }}/images/twitter.png">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a target="_blank" href="#">
-                    <img src="{{ url('<front>') }}{{ directory }}/images/facebook.png">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a target="_blank" href="#">
-                    <img src="{{ url('<front>') }}{{ directory }}/images/instagram.png">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a target="_blank" href="#">
-                    <img src="{{ url('<front>') }}{{ directory }}/images/youtube.png">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a target="_blank" href="#">
-                    <img src="{{ url('<front>') }}{{ directory }}/images/spotify.png">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a target="_blank" href="#">
-                    <img src="{{ url('<front>') }}{{ directory }}/images/soundcloud.jpg">
-                </a>
-            </li>
+            {% include directory ~ '/templates/includes/rs.html.twig' %}
         </ul>
 
         <div class="row justify-content-center position-relative">

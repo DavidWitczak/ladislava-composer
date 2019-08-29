@@ -37,43 +37,14 @@
     </div>
 </div>
 
-<ul class="nav justify-content-center">
-    <li class="list-inline-item">
-        <a target="_blank" href="#">
-            <img src="{{ url('<front>') }}{{ directory }}/images/twitter.png">
-        </a>
-    </li>
-    <li class="list-inline-item">
-        <a target="_blank" href="#">
-            <img src="{{ url('<front>') }}{{ directory }}/images/facebook.png">
-        </a>
-    </li>
-    <li class="list-inline-item">
-        <a target="_blank" href="#">
-            <img src="{{ url('<front>') }}{{ directory }}/images/instagram.png">
-        </a>
-    </li>
-    <li class="list-inline-item">
-        <a target="_blank" href="#">
-            <img src="{{ url('<front>') }}{{ directory }}/images/youtube.png">
-        </a>
-    </li>
-    <li class="list-inline-item">
-        <a target="_blank" href="#">
-            <img src="{{ url('<front>') }}{{ directory }}/images/spotify.png">
-        </a>
-    </li>
-    <li class="list-inline-item">
-        <a target="_blank" href="#">
-            <img src="{{ url('<front>') }}{{ directory }}/images/soundcloud.jpg">
-        </a>
-    </li>
+<ul class="nav justify-content-center my-3">
+    {% include directory ~ '/templates/includes/rs.html.twig' %}
 </ul>
 
-<div class="container">
+<div class="container mb-3">
     <div class="row justify-content-around">
         <div class="col text-align-center">
-            <a href="/mentions-legales" data-toggle="modal" data-target="#mentions">Mentions légales</a> - Ladislava 2019 - Tous droits réservés
+            <a href="/mentions-legales" data-toggle="modal" data-target="#mentions">Mentions légales</a> - Ladislava {{ "now"|date("Y") }} - Tous droits réservés
         </div>
     </div>
 </div>
@@ -88,23 +59,42 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h4>Photographie</h4>
+                <h4>Éditeur</h4>
                 <ul>
-                    <li>lorem</li>
-                    <li>lorem</li>
-                    <li>lorem</li>
+                    <li>Emmanuelle et Olivier Lombard<br/>
+                        55 rue Anatole France<br/>
+                        54000 Nancy<br/>
+                        France<br/>
+                        ladislava54@gmail.com<br/>
+                        06 45 47 46 39 / 06 78 86 88 06
+                    </li>
                 </ul>
-                <h4>Vidéos</h4>
+                <h4>Conception</h4>
                 <ul>
-                    <li>lorem</li>
-                    <li>lorem</li>
-                    <li>lorem</li>
+                    <li>Marion Coene</li>
+                </ul>
+                <h4>Graphisme</h4>
+                <ul>
+                    <li>Marion Coene</li>
+                    <li>Coralie Perrichot</li>
+                </ul>
+                <h4>CMS</h4>
+                <ul>
+                    <li>Drupal 8</li>
+                </ul>
+                <h4>Hébergement</h4>
+                <ul>
+                    <li>OVH<br/>
+                        2 rue Kellermann<br/>
+                        59100 Roubaix<br/>
+                        France
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-<button class="btn btn-campus" type="button" id="return-to-top">
+<button class="btn" type="button" id="return-to-top">
     <img src="{{ url('<front>') }}{{ directory }}/images/up.png">
 </button>

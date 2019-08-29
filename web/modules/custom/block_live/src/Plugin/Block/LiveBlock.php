@@ -26,7 +26,7 @@ class LiveBlock extends BlockBase {
     return $output;
   }
 
-  public function getNextLive(){
+  public function getNextLive() {
     $output = [];
     $output['#theme'] = 'block_live';
     $now = new DrupalDateTime('now');
@@ -37,20 +37,22 @@ class LiveBlock extends BlockBase {
     $query->condition('field_date', $now->getTimestamp(), '>');
 
     $query->sort('field_date', 'ASC');
-    $query->range(0,6);
+    $query->range(0, 6);
 
     $live_ids = $query->execute();
 
     $lives = Node::loadMultiple($live_ids);
 
-    foreach ($lives as $key => $live){
+    foreach ($lives as $key => $live) {
       $url = Url::fromRoute('entity.node.canonical', ['node' => $live->get('nid')->value], array("absolute" => TRUE))->toString();
 
       $output['#var']['live'][$key]['date'] = $live->get('field_date')->value;
       $output['#var']['live'][$key]['lieu'] = $live->get('field_lieu')->value;
       $output['#var']['live'][$key]['ville'] = $live->get('field_ville')->value;
       $output['#var']['live'][$key]['url'] = $url;
-      $output['#var']['live'][$key]['map'] = $live->field_map->first()->getUrl()->toString();
+      if (!$live->get('field_map')->isEmpty()) {
+        $output['#var']['live'][$key]['map'] = $live->field_map->first()->getUrl()->toString();
+      }
     }
 
     return $output;
