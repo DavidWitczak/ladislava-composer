@@ -8,11 +8,11 @@
     {% for live in var.live %}
         {% if live.past == false %}
             <div class="row justify-content-around py-4 concert">
-                <div class="col-lg-2">{{ live.date|date('U')|format_date('date_live')|upper }}</div>
+                <div class="col-lg-3">{{ live.date|date('U')|format_date('date_live')|upper }}</div>
                 <div class="col-lg-1">{{ live.date|date('U')|format_date('heure_live') }}</div>
                 <div class="col-lg-3">{{ live.lieu|upper }}</div>
                 <div class="col-lg-3">{{ live.ville|upper }}</div>
-                <div class="col-lg-2 text-align-right">
+                <div class="col-lg-1 text-align-right">
                     {% if live.map != '' %}
                         <a href="{{ live.map }}" target="_blank">
                             <img width="30" src="{{ url('<front>') }}{{ directory }}/images/location.png">
@@ -40,14 +40,14 @@
         <h3 class="text-uppercase">Passés</h3>
     </div>
 
-    {% for live in var.live %}
+    {% for live in var.live|reverse %}
         {% if live.past == true %}
             <div class="row justify-content-around py-4 concert">
-                <div class="col-lg-2">{{ live.date|date('U')|format_date('date_live')|upper }}</div>
+                <div class="col-lg-3">{{ live.date|date('U')|format_date('date_live_past')|upper }}</div>
                 <div class="col-lg-1">{{ live.date|date('U')|format_date('heure_live') }}</div>
                 <div class="col-lg-3">{{ live.lieu|upper }}</div>
                 <div class="col-lg-3">{{ live.ville|upper }}</div>
-                <div class="col-lg-2 text-align-right">
+                <div class="col-lg-1 text-align-right">
                     <a href="{{ live.map }}" target="_blank">
                         <img width="30" src="{{ url('<front>') }}{{ directory }}/images/location.png">
                     </a>

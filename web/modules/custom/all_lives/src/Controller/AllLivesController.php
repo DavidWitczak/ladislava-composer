@@ -57,6 +57,8 @@ class AllLivesController extends ControllerBase {
       }
     }
 
+    array_reverse($output['#var']['live'][$key]['past']);
+
     return $output;
   }
 

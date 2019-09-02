@@ -23,7 +23,7 @@
         "drupal/admin_toolbar": "^1.27",
         "drupal/backup_migrate": "^4.0",
         "drupal/bamboo_twig": "^4.1",
-        "drupal/captcha": "^1.0@beta",
+        "drupal/captcha": "1.0-beta1",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
         "drupal/ctools": "^3.2",
