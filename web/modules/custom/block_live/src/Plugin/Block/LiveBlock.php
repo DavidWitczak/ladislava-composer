@@ -34,7 +34,7 @@ class LiveBlock extends BlockBase {
     $query = \Drupal::entityQuery('node');
     $query->condition('type', 'live');
     $query->condition('status', 1);
-    $query->condition('field_date', $now->getTimestamp(), '>');
+    $query->condition('field_date', ($now->getTimestamp() + 7200), '>');
 
     $query->sort('field_date', 'ASC');
     $query->range(0, 6);

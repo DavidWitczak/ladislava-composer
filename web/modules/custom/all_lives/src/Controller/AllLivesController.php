@@ -42,7 +42,7 @@ class AllLivesController extends ControllerBase {
     foreach ($lives as $key => $live) {
       $url = Url::fromRoute('entity.node.canonical', ['node' => $live->get('nid')->value], array("absolute" => TRUE))->toString();
 
-      if ($live->get('field_date')->value < $now->getTimestamp()) {
+      if ($live->get('field_date')->value < ($now->getTimestamp() + 7200)) {
         $output['#var']['live'][$key]['past'] = TRUE;
       }
       else {
@@ -56,8 +56,6 @@ class AllLivesController extends ControllerBase {
         $output['#var']['live'][$key]['map'] = $live->field_map->first()->getUrl()->toString();
       }
     }
-
-    array_reverse($output['#var']['live'][$key]['past']);
 
     return $output;
   }
