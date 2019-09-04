@@ -30,7 +30,6 @@
 
     jQuery('.diapo-video').slick({
         infinite: false,
-        // slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: false,
         responsive: [
@@ -38,8 +37,6 @@
                 breakpoint: 2500,
                 settings: {
                     slidesToShow: 3,
-                    infinite: true,
-                    dots: true
                 }
             },
             {
