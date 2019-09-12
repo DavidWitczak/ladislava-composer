@@ -63,7 +63,11 @@ function ladislava_theme_suggestions_node_alter(array &$suggestions, array $vari
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function ladislava_preprocess_block(array &$variables) {
+  if($variables['derivative_plugin_id'] == 'live_block') {
+    //-- This stops the block being cache in drupal 8
+    $variables['#cache']['max-age'] = 0;
 
+  }
 }
 
 /**

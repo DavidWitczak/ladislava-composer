@@ -6,3 +6,5 @@ all_lives.all_lives_controller_allLives:
     _title: 'Concerts'
   requirements:
     _permission: 'access content'
+  options:
+      no_cache: 'TRUE'
