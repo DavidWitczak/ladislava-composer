@@ -29,6 +29,7 @@ class LiveBlock extends BlockBase {
   public function getNextLive() {
     $output = [];
     $output['#theme'] = 'block_live';
+	$output['#cache']['max-age'] = 0;
     $now = new DrupalDateTime('now');
 
     $query = \Drupal::entityQuery('node');
